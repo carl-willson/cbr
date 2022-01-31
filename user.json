@@ -1,0 +1,16 @@
+{
+	"actionableEntity": "Trade",
+	"actions": [
+		{
+			"startingStatus": "INITIAL",
+			"actionPerformed": "CREATE",
+			"targetStatus": "CREATED",
+			"rules": [
+				"CheckSettleDate",
+				"CheckCounterparty"
+			],
+			"auto": false
+		}
+	],
+	"active": true
+}

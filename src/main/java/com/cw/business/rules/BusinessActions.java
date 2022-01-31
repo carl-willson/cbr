@@ -31,7 +31,7 @@ public class BusinessActions<T extends ActionedEntity> {
 			successfulAction = findSuccessfulAction(oldVersion, newVersion);
 			
 			if ( successfulAction!=null ) {
-				newVersion.setStatus(successfulAction.getEndingStatus());
+				newVersion.setStatus(successfulAction.getTargetStatus());
 			}	
 			
 		} while(successfulAction!=null);

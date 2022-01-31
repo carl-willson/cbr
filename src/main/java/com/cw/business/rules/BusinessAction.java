@@ -13,18 +13,18 @@ public class BusinessAction<T> {
 	private String actionPerformed;
 	
 	// Resulting Status
-	private String endingStatus;
+	private String targetStatus;
 	
 
 	// BusinessRules
 	private List<BusinessRule<T>> rules = new ArrayList<BusinessRule<T>>();
 
 	
-	public BusinessAction(String startingStatus, String actionPerformed, String endingStatus) {
+	public BusinessAction(String startingStatus, String actionPerformed, String targetStatus) {
 		super();
 		this.startingStatus = startingStatus;
 		this.actionPerformed = actionPerformed;
-		this.endingStatus = endingStatus;
+		this.targetStatus = targetStatus;
 	}
 
 
@@ -48,14 +48,15 @@ public class BusinessAction<T> {
 	}
 
 
-	public String getEndingStatus() {
-		return endingStatus;
+	public String getTargetStatus() {
+		return targetStatus;
 	}
 
 
-	public void setEndingStatus(String endingStatus) {
-		this.endingStatus = endingStatus;
+	public void setTargetStatus(String targetStatus) {
+		this.targetStatus = targetStatus;
 	}
+
 
 	public void addRule (BusinessRule<T> newRule ) {
 		rules.add(newRule);
